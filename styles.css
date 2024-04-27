@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrollbar from appearing due to animation */
+    position: relative; /* Ensure the body is relatively positioned for z-index */
+    background-image: url('https://www.onlygfx.com/wp-content/uploads/2021/03/geometric-triangle-retro-pattern-3.png'); /* URL to your star background image */
+    animation: animateBackground 50s linear infinite; /* Adjust animation duration as needed */
+}
+
+@keyframes animateBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+.stars {
+    position: absolute; /* Position the stars absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the stars are behind other content */
+}
+
+.container {
+    position: relative; /* Ensure the container is relatively positioned */
+    z-index: 1; /* Ensure the container is on top of the stars */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background: rgba(0, 0, 0, 0.6); /* White semi-transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
+    width: 50%;
+    max-width: 600px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #dfe5ff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #dfe5ff;
+}
+
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
